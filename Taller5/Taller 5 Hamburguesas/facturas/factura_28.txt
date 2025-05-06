@@ -1,0 +1,11 @@
+Cliente: Seneca
+Dirección: Cra 1 #18A-12
+----------------
+corral
+            14000
+wrap de pollo
+            15000
+----------------
+Precio Neto:  29000
+IVA:          5510
+Precio Total: 34510

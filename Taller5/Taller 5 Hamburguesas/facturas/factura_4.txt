@@ -1,0 +1,7 @@
+Cliente: 2
+Dirección: 2
+----------------
+----------------
+Precio Neto:  0
+IVA:          0
+Precio Total: 0
