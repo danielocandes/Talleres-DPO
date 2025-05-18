@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
@@ -50,29 +49,40 @@ public class VentanaMapa extends JFrame implements ActionListener
     public VentanaMapa( VentanaPrincipal ventanaPrincipal, List<Restaurante> restaurantes )
     {
         this.ventanaPrincipal = ventanaPrincipal;
+        setLayout(new BorderLayout());
 
         // Agrega el panel donde se muestra el mapa
         // checktodo
         panelMapa = new PanelMapaVisualizar();
-
+        panelMapa.actualizarMapa(restaurantes);
+        
         // Agrega el panel con los RadioButtons y los configura
         // checktodo
         
         radioTodos = new JRadioButton("Todos", true);
+        radioTodos.addActionListener(this);
+        radioTodos.setActionCommand(TODOS);
+        
         radioVisitados = new JRadioButton("Visitados", false);
+        radioVisitados.addActionListener(this);
+        radioVisitados.setActionCommand(VISITADOS);
         
         JPanel panelRButtons = new JPanel();
         panelRButtons.setLayout(new FlowLayout());
         
+        add(panelMapa, BorderLayout.CENTER);
         panelRButtons.add(radioTodos);
         panelRButtons.add(radioVisitados);
         add(panelRButtons, BorderLayout.SOUTH);
 
         // Termina de configurar la ventana y la muestra
-        pack( );
+        setTitle( "Ventana Mapa" );
+        setDefaultCloseOperation( EXIT_ON_CLOSE );
+        setSize( 500, 600 );
         setResizable( false );
         setDefaultCloseOperation( DISPOSE_ON_CLOSE );
         setLocationRelativeTo( null );
+        setVisible(true);
     }
 
     @Override
@@ -82,10 +92,12 @@ public class VentanaMapa extends JFrame implements ActionListener
         if( TODOS.equals( comando ) )
         {
             panelMapa.actualizarMapa( ventanaPrincipal.getRestaurantes( true ) );
+            radioVisitados.setSelected(false);
         }
         else if( VISITADOS.equals( comando ) )
         {
             panelMapa.actualizarMapa( ventanaPrincipal.getRestaurantes( false ) );
+            radioTodos.setSelected(false);
         }
     }
 
