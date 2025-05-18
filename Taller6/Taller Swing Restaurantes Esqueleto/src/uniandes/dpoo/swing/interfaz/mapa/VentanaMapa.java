@@ -76,7 +76,7 @@ public class VentanaMapa extends JFrame implements ActionListener
         add(panelRButtons, BorderLayout.SOUTH);
 
         // Termina de configurar la ventana y la muestra
-        setTitle( "Ventana Mapa" );
+        setTitle( "Mapa" );
         setDefaultCloseOperation( EXIT_ON_CLOSE );
         setSize( 500, 600 );
         setResizable( false );

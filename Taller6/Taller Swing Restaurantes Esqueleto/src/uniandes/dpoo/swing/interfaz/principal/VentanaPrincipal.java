@@ -106,6 +106,7 @@ public class VentanaPrincipal extends JFrame
     	//checktodo
     	Restaurante restaurante = new Restaurante(nombre, calificacion, x, y, visitado);
         mundo.agregarRestaurante(restaurante);
+        actualizarRestaurantes();
     }
 
     /**
