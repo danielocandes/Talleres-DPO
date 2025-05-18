@@ -1,6 +1,7 @@
 package uniandes.dpoo.swing.interfaz.mapa;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -51,10 +52,21 @@ public class VentanaMapa extends JFrame implements ActionListener
         this.ventanaPrincipal = ventanaPrincipal;
 
         // Agrega el panel donde se muestra el mapa
-        // TODO completar
+        // checktodo
+        panelMapa = new PanelMapaVisualizar();
 
         // Agrega el panel con los RadioButtons y los configura
-        // TODO completar
+        // checktodo
+        
+        radioTodos = new JRadioButton("Todos", true);
+        radioVisitados = new JRadioButton("Visitados", false);
+        
+        JPanel panelRButtons = new JPanel();
+        panelRButtons.setLayout(new FlowLayout());
+        
+        panelRButtons.add(radioTodos);
+        panelRButtons.add(radioVisitados);
+        add(panelRButtons, BorderLayout.SOUTH);
 
         // Termina de configurar la ventana y la muestra
         pack( );

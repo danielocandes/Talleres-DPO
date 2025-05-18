@@ -31,10 +31,19 @@ public class PanelBotones extends JPanel implements ActionListener
         setLayout( new FlowLayout( ) );
 
         // Agrega el botón para crear un nuevo restaurante
-        // TODO completar
+        // reviewTODO completar
+        butNuevo = new JButton("Nuevo");
+        butNuevo.addActionListener(this);
+		butNuevo.setActionCommand(NUEVO);
 
         // Agrega el botón para ver todos los restaurantes
-        // TODO completar
+        // reviewTODO completar
+		butVerTodos = new JButton("Ver Todos");
+		butVerTodos.addActionListener(this);
+		butVerTodos.setActionCommand(VER);
+		
+		add(butNuevo);
+		add(butVerTodos);
     }
 
     @Override
