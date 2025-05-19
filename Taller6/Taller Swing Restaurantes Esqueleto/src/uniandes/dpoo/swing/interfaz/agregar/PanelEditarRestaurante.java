@@ -1,8 +1,6 @@
 package uniandes.dpoo.swing.interfaz.agregar;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;

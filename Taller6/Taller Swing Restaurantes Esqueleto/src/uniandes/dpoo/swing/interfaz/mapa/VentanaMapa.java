@@ -1,4 +1,4 @@
-package uniandes.dpoo.swing.interfaz.mapa;
+	package uniandes.dpoo.swing.interfaz.mapa;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
