@@ -1,0 +1,2 @@
+Taller 6 realizado por Daniel Alejandro Ocampo Lozano - 202410656
+El proyecto se inicia en uniandes.dpoo.swing.interfaz.principal > VentanaPrincipal.java que tiene el metodo main que inicia todo. Desde ahí se ejecuta la aplicación.
